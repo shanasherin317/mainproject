@@ -8,19 +8,19 @@ export  const data2=[
         icon:<LuBadgeDollarSign />,
         para:"GET 25%",
         para1:"OFF",
-        style:"bg-green-100",
+        style:"bg-[#FFE7E7]",
     },
     {
         icon:<FaShoppingCart />,
         para:"FREE HOME",
         para1:" DELIVERY ",
-        style:"bg-amber-100",
+        style:"bg-[#FDCEDF]",
     },
     {
         icon:<FaUserDoctor />,
         para:"DOCTOR'S",
         para1:" APPOINTMENT ",
-        style:"bg-lime-200",
+        style:"bg-[#EBD9DD]",
     },
     {
         icon:<FaStethoscope />,

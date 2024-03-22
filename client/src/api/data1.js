@@ -20,5 +20,10 @@ export const data1=[
         para:"urimax",
         para1:"$60",
     },
+    {
+        image:"/src/assets/img/thing.png",
+        para:"urimax",
+        para1:"$60",
+    },
 
 ]

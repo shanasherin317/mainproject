@@ -10,7 +10,8 @@ import 'swiper/css/pagination';
 // import './styles.css';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 import Home1 from "../../home/Home1";
-import Home2 from '../../home/Home2';
+// import Home2 from '../../home/Home2';
+import Home3 from '../../home/Home3';
 
 
 
@@ -30,18 +31,21 @@ function Homebanner() {
       className="mySwiper"
     >
       <SwiperSlide>
-       <Home1/>
+      <Home3/>
       </SwiperSlide>
 
 
       <SwiperSlide>
-     <Home2/>
+      <Home1/>
       </SwiperSlide>
 
       <SwiperSlide>
-      kk
+      <Home3/>
       </SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
+      
+      <SwiperSlide>
+      <Home1/>
+      </SwiperSlide>
     </Swiper>
   </>
   )

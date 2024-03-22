@@ -2,11 +2,13 @@ import Routes from "./Routes/Routes"
 import "./App.css";
 
 function App() {
-
+ 
 
   return (
     <>
-     <Routes/>
+      <div>
+  <Routes/>
+    </div>
     </>
   )
 }

@@ -3,14 +3,11 @@ import Header from "./header/Header"
 import Footer from "./footer/Footer"
 
 function UserLayout() {
+
   return (
-    <div>
+      <div>
     <Header/>
-    {/* <Item/> */}
     <Outlet/>
-    {/* <MiniCards/>
-    <Cards/>
-    <Cards2/> */}
     <Footer/>
     </div>
   ) 

@@ -1,18 +1,27 @@
+import { FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function CardProduct({img,name,para}) {
   return (
     <>
-    <div className="hover:scale-105 transition duration-1000 px-10 py-5 bg-slate-00 border-1 rounded-lg shadow-lg w-60 mt-5 ">
+    <Link to={'cardview'}>
+    <div className="hover:scale-105 transition duration-1000 border border-black rounded-lg mt-5 group shadow-lg ">
         <div>
-            <img className="w-32" src={img} alt="" />
+            <img className="m-auto w-40" src={img} alt="" />
         </div>
         <div>
-            <h2 className="text-xl font-mono font-bold">{name}</h2>
-            <p className=" font-bold text-lg">{para}</p>
+            <h2 className="text-xl font-mono max-[355px]:text-[15px] text-center">{name}</h2>
+            <p className=" text-md max-[355px]:text-[15px] text-center">{para}</p>
+            <Link to={'wishlist'}>
             <div className="text-center">
-                <button className="bg-green-600 py-2 w-full text-white rounded-lg text-lg">Add To Cart</button>
+                <button className="wish text-[#FBFADA] py-1 w-full md:flex  border-none text-md mt-2 invisible group-hover:visible hidden gap-3 justify-center">Wishlist<FaHeart className="mt-1" /></button>
+            </div>
+            </Link>
+            <div className="">
+                <button className="py-1 w-full text-md mt-2 invisible group-hover:visible flex md:hidden gap-3 justify-end"><FaHeart className="mt-1 me-2" /></button>
             </div>
         </div>
     </div>
+    </Link>
    </>
   )
 }
