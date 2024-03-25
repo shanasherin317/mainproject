@@ -5,15 +5,21 @@ import { FaSearch } from "react-icons/fa";
 import Dropdown from "../dropdown/Dropdown";
 import { Link } from "react-router-dom";
 import Dropdown2 from "../dropdown2/Dropdown2";
+import './styles.css'
 function Header() {
     return (
       <>
         <div className="bg-gray-100 py-3">
           <div className="container mx-auto flex justify-between items-center">
            
-            <div className="text-black">
+            {/* <div className="text-black"> */}
               {/* <img className="w-[100px]" src="/src/assets/img/logo.png" alt="" /> */}
-              <h1 className="font-bold text-2xl text-[#944E63]">pharmacie</h1>
+              {/* <h1 className="black-and font-bold text-2xl text-[#944E63]">pharmacie</h1> */}
+            {/* </div> */}
+
+            <div className="caesar-dressing-regular">
+            {/* <h1 className="black-and font-bold text-2xl text-[#944E63]">pharmacie</h1> */}
+            <h1 className="text-2xl text-[#B47B84]">FABPHARM</h1>
             </div>
             
             

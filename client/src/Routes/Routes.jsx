@@ -8,6 +8,7 @@ import Cart from "../User/Components/cart/Cart";
 import Wishlist from "../User/Components/wishlist/Wishlist";
 import Viewall from "../User/view all/Viewall";
 import CardView from "../User/Components/cardview/CardView";
+import Loads from '../User/Components/loading/Loads'
   
  
 function Routes() {
@@ -19,6 +20,11 @@ function Routes() {
          <UserLayout/>,
       
         children:[
+          {
+            path:"/",
+            element:<Loads/>
+        },
+
           {
               path:'',
               element:<AdminHome/>
