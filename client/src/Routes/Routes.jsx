@@ -7,9 +7,12 @@ import AdminHome from "../User/pages/Home";
 import Cart from "../User/Components/cart/Cart";
 import Wishlist from "../User/Components/wishlist/Wishlist";
 import Viewall from "../User/view all/Viewall";
-import CardView from "../User/Components/cardview/CardView";
+// import CardView from "../User/Components/cardview/CardView";
 import Loads from '../User/Components/loading/Loads'
-  
+import Shopping from "../User/Components/shopping/Shopping";
+import ViewCard from "../User/Components/cardview/ViewCard";
+import BuyNowForm from "../User/Components/buynow/BuyNow";
+import Orrde20 from "../User/Components/Orrde20/Orrde20.jsx"
  
 function Routes() {
 
@@ -23,6 +26,10 @@ function Routes() {
           {
             path:"/",
             element:<Loads/>
+        },
+        {
+          path:'offer-20',
+          element:<Orrde20/>
         },
 
           {
@@ -42,15 +49,23 @@ function Routes() {
         element:<Viewall/>
     },
     {
-      path:'cardview',
-      element:<CardView/>
-  }
+      path:'cardview/:id/:section',
+      element:<ViewCard/>
+  },
+  {
+    path:'shopping',
+    element:<Shopping/>
+},
+{
+  path:'buynow',
+  element:<BuyNowForm/>
+},
         ]
       },
     ]);
 
 return (
-  <RouterProvider router={router} />
+  <RouterProvider  router={router} />
 )
 }
 

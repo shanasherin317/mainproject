@@ -24,7 +24,7 @@ function Homebanner() {
     <Swiper
       cssMode={true}
       navigation={true}
-      pagination={true}
+      // pagination={true}
       mousewheel={true}
       keyboard={true}
       modules={[Navigation, Pagination, Mousewheel, Keyboard]}
@@ -39,13 +39,13 @@ function Homebanner() {
       <Home1/>
       </SwiperSlide>
 
-      <SwiperSlide>
+      {/* <SwiperSlide>
       <Home3/>
       </SwiperSlide>
       
       <SwiperSlide>
       <Home1/>
-      </SwiperSlide>
+      </SwiperSlide> */}
     </Swiper>
   </>
   )

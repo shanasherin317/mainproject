@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import CardProduct from "../Components/card/CardProduct";
-import { data1 } from '../../api/data1';
-import { data3 } from '../../api/data3';
-import { data4 } from '../../api/data4';
+import { useState } from "react";
+import { data3 } from '../../../api/data3';
+import { data1 } from '../../../api/data1';
+import { data4 } from '../../../api/data4';
+import CardProduct from "../card/CardProduct";
 
-function Viewall() {
+function Shopping() {
   // Assuming each page will display 10 items
   const itemsPerPage = 10;
 
@@ -57,4 +57,4 @@ function Viewall() {
   );
 }
 
-export default Viewall;
+export default Shopping;

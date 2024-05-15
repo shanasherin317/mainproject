@@ -1,12 +1,12 @@
 
-import { IoIosArrowForward } from "react-icons/io";
+// import { IoIosArrowForward } from "react-icons/io";
 function MiniCard2({style,icon,para,para1,name}) {
 
      
 
   return (
                 <>
-                <div className={`hover:animate-bounce flex px-10 py-5 gap-4 justify-evenly items-center flex-col md:flex-row max-[990px]:ms-4 max-[633px]:mb-3 ${style} rounded-lg`}>
+                <div className={`hover:animate-bounce flex px-6 py-5 gap-4 justify-evenly items-center flex-col lg:flex-row max-[990px]:ms-4 max-[633px]:mb-3 ${style} rounded-lg max-[766px]:mt-2 `}>
                     <div className="flex-row">
                 
                 <div className=" flex gap-4">

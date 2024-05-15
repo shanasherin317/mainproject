@@ -1,32 +1,64 @@
-import { SlCalender } from "react-icons/sl"
+import { useContext } from "react";
+import { AppContext } from "../../../App";
+import { Link } from "react-router-dom";
 
 function Cart() {
+  const { cart,wishListClick ,removeClick,handleOnAdd,handleOnRemove} = useContext(AppContext);
+   
   return (
-    <div className="m-5 flex flex-wrap">
-      <div className="border rounded-md mt-2">
+    <>
+    {cart.length>0 ? 
+      <div>
+        <div className="p-5 flex">
+          {cart?.map((item) => {
+            return (
+              <>
+               
+                 <div className="border rounded-md mt-2">
 
-<div className="flex flex-col lg:flex-row">
+<div className="flex flex-col lg:flex-row"> 
   <div>
-    <img className="w-60 h-fit" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQfvV5XqxSPPboJTcFG9nN_1KMqiLtkOmpmkvxMBk3P3f_SCeCX" alt="" />
+    <img className="w-60 h-48" src={item.image} alt="" />
   </div>
   <div className="flex">
 <div className="p-3">
-<div className="flex gap-4">
-<p className="text-green-600 bg-gray-200 rounded-lg px-1">Doctor</p>
-<SlCalender className="mt-1"/>
-      <p className="text-gray-500">24 Dec,2024</p>
-</div>
-  <h1 className="text-md font-normal leading-snug mt-2">In this Section,we devel into <br /> various aspects of health</h1>
-  <p className="mt-1 text-sm text-gray-500">Healthy eating emphasizes fruits, vegetables, whole grains, dairy,<br /> and protein. Dairy recommendations.
+  <h1 className="text-lg font-mono max-[355px]:text-[15px] ml-2 mt-1 hover:scale-100">{item.name}</h1>
+  <p className=" text-sm max-[355px]:text-[15px] ml-2">{item.description}</p>
+  <p className=" text-md max-[355px]:text-[15px] ml-2 mt-1 font-bold">${item.rate}
   </p>
-  <button className="hover:scale-105 mt-3 px-2 text-sm bg-green-600 text-white rounded-lg">Read More</button>
+  <div className="flex gap-4">
+  <button onClick={()=>removeClick(item)} className="hover:scale-105 mt-3 px-2 text-sm text-[#944E63] rounded-lg py-1 flex">Remove<i className="fa-solid fa-trash mt-1 ml-1"></i></button>
+  <Link to={'/wishlist'}>
+  <button  onClick={() => wishListClick(item)} className="hover:scale-105 mt-3 px-2 text-sm text-[#944E63] rounded-lg py-1">Move to wishlist<i className="fa-solid fa-heart  mt-1 ml-1"></i></button>
+  </Link>
+  </div>
+
+  <div className="bg-slate-300 w-16 rounded-md mt-1" style={{color:"#944E63", marginLeft:"8px",display:"flex",gap:"2px"}}>
+          <button className='font-bold'  onClick={()=>handleOnAdd(item)}>+</button>
+          {item.count}
+          <button className='btn1 ms-2 font-bold' onClick={()=>handleOnRemove(item)} >-</button>
+          </div>
+
 </div>
   </div>
 </div>
 </div>
-
-    </div>
-  )
+              </>
+            );
+          })}
+        </div>
+      </div> :
+      <div className="p-3">
+      <div className="flex justify-center items-center">
+        <img className="w-96 " src="https://assets.materialup.com/uploads/ab4605f2-e16b-487b-9684-01756d71d244/ntta_m346_05.jpg" alt="" />
+      </div>
+      <div className="kaushan-script-regular text-center text-[#944E63] text-xl">
+      Click 'Add to Cart' to include items in your shopping cart.
+      </div>
+      </div>
+}
+    </>
+  );
 }
 
-export default Cart
+export default Cart;
